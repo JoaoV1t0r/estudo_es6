@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		//const não pode ser reescrito
+		const SERIE = 'Game of Thrones'
+
+		function x() {
+			const SERIE = 'Peaky Blinders'
+			console.log('Bloco = ' + SERIE)
+		}
+
+		x()
+
+		console.log('Global = ' + SERIE)
+
+	</script>
+</body>
+</html>

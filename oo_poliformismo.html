@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		class Animal{
+			constructor(cor, tamanho, peso){
+				this.cor = cor
+				this.tamanho = tamanho
+				this.peso = peso
+			}
+			dormir(){
+				console.log('Dormir')
+			}
+		}
+		
+		class Passaro extends Animal{
+			constructor(bico, cor, tamanho, peso){
+				super(cor, tamanho, peso)
+				this.bico = bico
+			}
+			voar(){
+				console.log('Voar')
+			}
+		}
+
+		class Papagaio extends Passaro{
+			constructor(sabeFalar, bico, cor, tamanho, peso){
+				super(bico, cor, tamanho, peso)
+				this.sabeFalar = sabeFalar
+			}
+		}
+
+		class Avestruz extends Passaro{
+			constructor(bico, cor, tamanho, peso){
+				super(bico, cor, tamanho, peso)
+			}
+			enterrarCabeca(){
+				console.log('Enterrar cabeça')
+			}
+			voar(){
+				console.log('Avestruz não voa')
+			}
+		}
+
+		let papagaio = new Papagaio(false, 'Pequeno', 'Amarelo', 6, 100)
+		let avestruz = new Avestruz('Grande', 'Marrom', 250, 150000)
+		console.log(avestruz)
+		avestruz.voar()
+
+	</script>
+</body>
+</html>

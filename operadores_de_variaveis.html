@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		var serie = 'Peaky Blinders'
+		
+		function x () {
+			var serie = 'Game of Thrones'
+			console.log('Função = ' + serie)
+			if (true) {
+				console.log('Bloco dentro da função = ' + serie)
+			}
+		}		
+
+		x()
+
+		if (true) {
+			//let só é acessado no seu bloco
+			let serie2 = 'The Walking Dead'
+			console.log('Let = ' + serie2)
+			console.log('Global = ' + serie)
+		}
+
+	</script>
+</body>
+</html>

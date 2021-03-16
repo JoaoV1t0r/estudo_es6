@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+		
+		//objeto literal
+		let aviao1 = {
+			cor: 'Branco',
+			modelo: 'Airbus a380',
+			levantarVoo: function(){console.log('Levantar Voo')}
+		}
+
+		//função construtora
+		let AviaoF = function(){
+			this.cor = 'Azul'
+			this.modelo = 'Boeing 787'
+			this.levantarVoo = function(){console.log('Levantar Voo')}
+		}
+		let aviao2 = new AviaoF()
+
+		//classe
+		class AviaoC{
+			constructor(){
+				this.cor = 'Preto'
+				this.modelo = 'Embraer E-Jets' 
+			}
+			levantarVoo = function(){console.log('Levantar Voo')}
+		}
+
+		let aviao3 = new AviaoC()
+
+		console.log(aviao1)
+		console.log(aviao2)
+		console.log(aviao3)
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		let assinatura = {
+			idCliente: 1000,
+			descricao:'Acesso a internet',
+			status(){
+				console.log('Ativo')
+			}
+		}
+
+		console.log(assinatura)
+		let y = assinatura
+		console.log(y)
+		y.status()
+
+	</script>
+</body>
+</html>

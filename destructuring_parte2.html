@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+		
+		//destructuring
+		let produto = {
+			descricao:'Notebook',
+			preco: 3000,
+			detalhes: {
+				fabricante: 'A',
+				modelo: 'ATT'
+			}
+		}
+		//let {descricao,preco} = produto
+		let {descricao:d,preco:p} = produto
+		console.log(d,p)
+
+		
+
+	</script>
+</body>
+</html>

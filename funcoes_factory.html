@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		let bicicleta1 = {
+			cor: 'Branca',
+			marcha: 'única',
+			aro: 12,
+			pedalar(){console.log('Método Pedalar executado')} 
+		}
+		console.log(bicicleta1)
+		
+		let BicicletaFactory = function (cor,marcha,aro){ 
+			return{
+				cor,
+				marcha,
+				aro,
+				pedalar(){console.log('Método Pedalar executado')} 
+			}
+		}
+		let bicicleta2 = BicicletaFactory('Azul','2',17)
+		console.log(bicicleta2)
+
+	</script>
+</body>
+</html>

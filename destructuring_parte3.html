@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+		
+		//destructuring
+
+		let arr = Array(10,20,30,40)
+		function teste([a,b,c,d]) {
+			console.log(a,b,c)
+		}
+		teste(arr)
+
+		let obj = {
+			x:10,
+			y:20,
+			w:30,
+			z:40
+		}
+
+		function teste2({x,y}){
+			console.log(x,y)
+		}
+		teste2(obj)
+
+	</script>
+</body>
+</html>

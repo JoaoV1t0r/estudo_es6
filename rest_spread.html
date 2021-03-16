@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+		
+		//array spread
+		let tituloArtigo = 'Como utilizar o operador Spread'
+		console.log(tituloArtigo)
+		console.log(...tituloArtigo)
+
+		let listaCursos = Array('NodeJS', 'PHP', 'Java')
+		let listaCursos2 = Array('JS', 'Ruby', 'React')
+		let listaCursosCompleta = Array('Vue', 'Angular', ...listaCursos, ...listaCursos2)
+		console.log(listaCursosCompleta)
+
+		//objeto spread
+
+		let pessoa = {
+			nome:'João',
+			idade: 19
+		}
+		let clone = {
+			endereco: 'Rua ABC',
+			...pessoa
+		}
+		console.log(clone)
+
+	</script>
+</body>
+</html>

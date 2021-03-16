@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript e OO</title>
+</head>
+<body>
+	<script>
+
+		//um software de marcenaria
+		//cadeira e sofá
+
+		//paradigma procedural
+		/*
+		let cadeiras = Array()
+
+		function girarCadeira () {
+			if(giratoria === true){
+				console.log('Girou')
+			}else {
+				console.log('Cadeira não é giratoria')
+			}
+		}
+		function adicionarCadeira(qtde_pernas,giratoria,cor) {
+			let cadeira = Array()
+
+			cadeira['qtde_pernas'] = qtde_pernas
+			cadeira['giratoria'] = giratoria
+			cadeira['cor'] = cor
+
+			cadeiras.push(cadeira)
+		}
+
+		adicionarCadeira(1,false,'azul')
+		adicionarCadeira(6,true,'preto')
+		console.log(cadeiras)
+		*/
+
+		//Usando POO
+
+		class Cadeira {
+			constructor(qtde_pernas,giratoria,cor){
+				this.qtde_pernas = qtde_pernas
+				this.giratoria = giratoria
+				this.cor = cor
+			}
+
+			girarCadeira(){
+				if(this.giratoria === true){
+					console.log('Girou')
+				}else {
+					console.log('Cadeira não é giratoria')
+				}
+			}
+		}
+
+		let cadeira = new Cadeira(4,false,'azul')
+
+		let cadeiras = Array()
+
+		cadeiras.push(new Cadeira(1,true,'vermelha'))
+		
+		console.log(cadeiras)
+
+		cadeira.girarCadeira()
+
+	</script>
+</body>
+</html>

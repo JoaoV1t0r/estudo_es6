@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ECMAScript OO</title>
+</head>
+<body>
+
+	<script>
+		class ContaBancaria{
+			//agencia
+			//numeroConta
+			//saldo
+			//limite
+			constructor(){
+				this.agencia = 1075
+				this.numeroConta = 20091238
+				this.saldo = 50
+				this.limite = 450
+			}
+			//Ações 
+			depositar(valorDeposito){
+				this.saldo += valorDeposito
+			}
+			sacar(valorSaque){
+				this.saldo -= valorSaque
+			}
+			consultarSaldo(){
+				return this.saldo
+			}
+		}
+
+		let banco = new ContaBancaria()
+		console.log(banco.consultarSaldo())
+	</script>
+
+</body>
+</html>
